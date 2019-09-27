@@ -20,24 +20,24 @@ public class ShipwreckControllerTest {
 
 	@Mock
 	private ShipwreckRepository shipwreckRepository;
-	
+
 	@Before
 	public void init() {
 		MockitoAnnotations.initMocks(this);
 	}
-	
+
 	@Test
 	public void testShipwreckGet() {
-		Shipwreck sw =new Shipwreck();
+		Shipwreck sw = new Shipwreck();
 		sw.setId(1L);
 		when(shipwreckRepository.findOne(1L)).thenReturn(sw);
-		
+
 		Shipwreck wreck = sc.get(1L);
-		
+
 		verify(shipwreckRepository).findOne(1L);
-		
-		//assertEquals(1L, wreck.getId().longValue());
-		
-		assertThat(wreck.getId(),is(1L));
+
+		// assertEquals(1L, wreck.getId().longValue());
+
+		assertThat(wreck.getId(), is(1L));
 	}
 }

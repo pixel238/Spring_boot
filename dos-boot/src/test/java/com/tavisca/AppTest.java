@@ -6,13 +6,11 @@ import org.junit.Test;
 
 import com.tavisca.controller.HomeController;
 
-public class AppTest 
-{
+public class AppTest {
 	@Test
-    public void testApp()
-    {
+	public void testApp() {
 		HomeController hc = new HomeController();
 		String result = hc.home();
 		assertEquals(result, "Dos Boot, reporting for duty");
-    }
+	}
 }

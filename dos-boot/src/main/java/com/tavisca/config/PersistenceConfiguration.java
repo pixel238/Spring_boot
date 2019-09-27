@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class PersistenceConfiguration {
 	@Bean
-	@ConfigurationProperties(prefix="spring.datasource")
+	@ConfigurationProperties(prefix = "spring.datasource")
 	@Primary
 	public DataSource dataSource() {
 		return DataSourceBuilder.create().build();
 	}
-	
+
 	@Bean
-	@ConfigurationProperties(prefix="datasource.flyway")
+	@ConfigurationProperties(prefix = "datasource.flyway")
 	@FlywayDataSource
 	public DataSource flywaydataSource() {
 		return DataSourceBuilder.create().build();

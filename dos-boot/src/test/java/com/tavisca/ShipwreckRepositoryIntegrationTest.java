@@ -20,10 +20,10 @@ import com.tavisca.repository.ShipwreckRepository;
 //Depreciated annotation please use the below one. 
 @SpringBootTest(classes = App.class)
 public class ShipwreckRepositoryIntegrationTest {
-	
+
 	@Autowired
 	private ShipwreckRepository shipwreckRepository;
-	
+
 	@Test
 	public void testFindAll() {
 		List<Shipwreck> wrecks = shipwreckRepository.findAll();
